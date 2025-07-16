@@ -1,0 +1,72 @@
+meta(charset='utf-8')
+meta(name='viewport', content='width=device-width,initial-scale=1,shrink-to-fit=no')
+title COINEX | Responsive Bootstrap 5 Admin Dashboard Template
+//  Favicon 
+link(rel='shortcut icon', href='/assets/images/coinblazers-favicon2.png')
+link(rel='stylesheet', href='/assets/css/libs.min.css')
+link(rel='stylesheet', href='/assets/css/coinex.css?v=1.0.0')
+//  loader Start 
+#loading
+  .loader.simple-loader
+    .loader-body
+//  loader END 
+div(style='background-image: url(\'/assets/images/auth/01.png\')')
+  .wrapper
+    section.vh-100.bg-image
+      .container.h-100
+        .row.justify-content-center.h-100.align-items-center
+          .col-md-6.mt-5
+            .card
+              .card-body
+                .auth-form
+                  h2.text-center.mb-4 Sign Up
+                  form#signupForm
+                    .row
+                      .col-md-6.mb-4
+                        .form-floating.mb-3
+                          input.form-control#firstName(type='text', placeholder='FirstName')
+                          label(for='firstName') First Name
+                      .col-md-6.mb-4
+                        .form-floating.mb-3
+                          input.form-control#lastName(type='text', placeholder='lastName')
+                          label(for='lastName') Last Name
+                    .row
+                      .col-md-6.mb-4
+                        .form-floating.mb-3
+                          input.form-control#email(type='email', placeholder='name@example.com')
+                          label(for='email') Email
+                      .col-md-6.mb-4
+                        .form-floating.mb-3
+                          input.form-control#phonenum(type='text', placeholder='phoneno')
+                          label(for='phonenum') Phone no
+                    .row
+                      .col-md-6.mb-4
+                        .form-floating.mb-2
+                          input.form-control#password(type='password', placeholder='Password')
+                          label(for='password') Password
+                    //-   .col-md-6.mb-4
+                    //-     .form-floating.mb-2
+                    //-       input.form-control#confirmpassword(type='text', placeholder='confirmpassword')
+                    //-       label(for='confirmpassword') Confirm-password
+                    .form-check.d-flex.justify-content-center.mb-2
+                      input.form-check-input#agree(type='checkbox')
+                      label.ms-1.form-check-label(for='agree') I agree with the terms of use
+                    .text-center
+                      button.btn.btn-primary(type='submit') Sign Up
+                  .new-account.mt-3.text-center
+                    p
+                      | Already have an Account 
+                      a.text-primary(href='/signin') Sign in
+
+//  Custom JavaScript 
+script(src='/js/bundle.js')
+//  Backend Bundle JavaScript 
+script(src='/assets/js/libs.min.js')
+//  widgetchart JavaScript 
+script(src='/assets/js/charts/widgetcharts.js')
+//  fslightbox JavaScript 
+script(src='/assets/js/fslightbox.js')
+//  app JavaScript 
+script(src='/assets/js/app.js')
+//  apexchart JavaScript 
+script(src='/assets/js/charts/apexcharts.js')

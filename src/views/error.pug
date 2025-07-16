@@ -1,0 +1,31 @@
+meta(charset='utf-8')
+meta(name='viewport', content='width=device-width,initial-scale=1,shrink-to-fit=no')
+title COINEX | Responsive Bootstrap 5 Admin Dashboard Template
+//  Favicon 
+link(rel='shortcut icon', href='/assets/images/coinblazers-favicon2.png')
+link(rel='stylesheet', href='/assets/css/libs.min.css')
+link(rel='stylesheet', href='/assets/css/coinex.css?v=1.0.0')
+//  loader Start 
+#loading
+  .loader.simple-loader
+    .loader-body
+//  loader END 
+div
+  .wrapper
+    .gradient1
+      .container.text-center(style='position:relative; top:30vh')
+        img.img-fluid.w-50(src='/assets/images/error/404.png', alt)
+        h2.mb-0.mt-5.text-white= errorMessage
+        a.btn.btn-primary.text-white.d-inline-flex.align-items-center.mt-3(href='/signin') Login
+        div(style='position: absolute; top:0;left:-291px;transform: rotate(-15.75deg);')
+          img.d-none.d-md-block(src='/assets/images/error/01.png', alt='error', style='height: 500px')
+//  Backend Bundle JavaScript 
+script(src='/assets/js/libs.min.js')
+//  widgetchart JavaScript 
+script(src='/assets/js/charts/widgetcharts.js')
+//  fslightbox JavaScript 
+script(src='/assets/js/fslightbox.js')
+//  app JavaScript 
+script(src='/assets/js/app.js')
+//  apexchart JavaScript 
+script(src='/assets/js/charts/apexcharts.js')

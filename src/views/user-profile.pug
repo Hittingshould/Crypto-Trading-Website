@@ -1,0 +1,106 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title coinblazers
+  // Favicon
+  link(rel='shortcut icon' href='../../assets/images/coinblazers-favicon2.png')
+  link(rel='stylesheet' href='../../assets/css/libs.min.css')
+  link(rel='stylesheet' href='../../assets/css/coinex.css?v=1.0.0')
+// loader Start
+#loading
+  .loader.simple-loader
+    .loader-body
+// loader END
+main.main-content
+  .position-relative
+    // Nav Start
+    nav.nav.navbar.navbar-expand-lg.navbar-light.iq-navbar.border-bottom
+      .container-fluid.navbar-inner
+        h4.title
+          | My Profile
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+            span.navbar-toggler-bar.bar1.mt-2
+            span.navbar-toggler-bar.bar2
+            span.navbar-toggler-bar.bar3
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.ms-auto.navbar-list.mb-2.mb-lg-0.align-items-center
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.py-0.d-flex.align-items-center(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                img.img-fluid.avatar.avatar-50.avatar-rounded(src='../../assets/images/avatars/01.png' alt='User-Profile')
+                .caption.ms-3
+                  h6.mb-0.caption-title= `${user.firstName} ${user.lastName}`
+                  p.mb-0.caption-sub-title= user.role
+              ul.dropdown-menu.dropdown-menu-end(aria-labelledby='navbarDropdown')
+                li.border-0
+                  a.dropdown-item(href='/user-profile') Profile
+                li.border-0
+                  a.dropdown-item(href='/account') Dashboard
+                li.border-0
+                  a.dropdown-item(href='/deposit') Deposit
+                li.border-0
+                  a.dropdown-item(href='/withdraw') Withdrawal
+                li.border-0
+                  a.dropdown-item(href='/traders') Traders
+                li.border-0
+                  hr.m-0.dropdown-divider
+                li.border-0
+                  a.dropdown-item#logoutLink(href='') Logout
+    // Nav End
+  .container-fluid.content-inner.pb-0
+    .container-fluid
+      .row
+        .col-lg-12
+          .iq-edit-list-data
+            .tab-content
+              #personal-information.tab-pane.fade.active.show(role='tabpanel')
+                .card
+                  .card-header.d-flex.justify-content-between
+                    .iq-header-title
+                      h4.card-title Personal Information
+                  .card-body
+                    form
+                      .form-group.row.align-items-center
+                        //- .col-md-12
+                        //-   .profile-img-edit
+                        //-     .crm-profile-img-edit
+                        //-       img.crm-profile-pic.rounded-circle.avatar-100(src='../../assets/images/user/11.png' alt='profile-pic')
+                        //-       .upload-icone.bg-primary
+                        //-         i.las.la-pen.upload-button
+                        //-         input.file-upload(type='file' accept='image/*')
+                      .row.align-items-center
+                        .form-group.col-sm-6
+                          label(for='fname') First Name:
+                          input#firstName.form-control(type='text' value=user.firstName)
+                        .form-group.col-sm-6
+                          label(for='lname') Last Name:
+                          input#lastName.form-control(type='text' value=user.lastName)
+                        .form-group.col-sm-6
+                          label(for='uname') Email:
+                          input#email.form-control(type='text' value=user.email)
+                        .form-group.col-sm-6
+                          label(for='uname') Telephone:
+                          input#phonenum.form-control(type='text' value=user.phonenum)
+                        .form-group.col-sm-6
+                          label(for='uname') Password:
+                          input#password.form-control(type='password' value=user.password)
+                      button.btn.btn-primary.mr-2#my-profile-update(type='submit') Update
+// Wrapper End
+// offcanvas start
+//  Custom JavaScript 
+script(src='/js/bundle.js')
+// Backend Bundle JavaScript
+script(src='/assets/js/libs.min.js')
+// widgetchart JavaScript
+script(src='/assets/js/charts/widgetcharts.js')
+// fslightbox JavaScript
+script(src='/assets/js/fslightbox.js')
+// app JavaScript
+script(src='/assets/js/app.js')
+// apexchart JavaScript
+script(src='/assets/js/charts/apexcharts.js')
+script(src='//code.jivosite.com/widget/yoUx1fCjuJ' async='')
+
+
+

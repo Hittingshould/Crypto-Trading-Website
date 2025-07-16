@@ -1,0 +1,161 @@
+meta(charset='utf-8')
+meta(name='viewport', content='width=device-width,initial-scale=1,shrink-to-fit=no')
+title coinblazers
+//  Favicon 
+link(rel='shortcut icon', href='/assets/images/coinblazers-favicon2.png')
+link(rel='stylesheet', href='/assets/css/libs.min.css')
+link(rel='stylesheet', href='/assets/css/coinex.css?v=1.0.0')
+//  loader Start 
+#loading
+  .loader.simple-loader
+    .loader-body
+//  loader END 
+aside.sidebar.sidebar-default.navs-rounded
+  .sidebar-header.d-flex.align-items-center.justify-content-start
+    a.navbar-brand.dis-none.align-items-center.justify-content-center(href='index.html')
+      h4.logo-title.m-0 COINBLAZERS
+    .sidebar-toggle(data-toggle='sidebar', data-active='true')
+      i.icon
+        svg(width='20', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+          path(d='M4.25 12.2744L19.25 12.2744', stroke='currentColor', stroke-width='1.5')
+          path(d='M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976', stroke='currentColor', stroke-width='1.5')
+  .sidebar-body.p-0.data-scrollbar
+    .collapse.navbar-collapse.pe-3#sidebar
+      ul.navbar-nav.iq-main-menu
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse', href='#transactions', role='button', aria-expanded='false', aria-controls='sidebar-user')
+            i.icon
+              svg(width='22', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9849 15.3462C8.11731 15.3462 4.81445 15.931 4.81445 18.2729C4.81445 20.6148 8.09636 21.2205 11.9849 21.2205C15.8525 21.2205 19.1545 20.6348 19.1545 18.2938C19.1545 15.9529 15.8735 15.3462 11.9849 15.3462Z', stroke='currentColor', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9849 12.0059C14.523 12.0059 16.5801 9.94779 16.5801 7.40969C16.5801 4.8716 14.523 2.81445 11.9849 2.81445C9.44679 2.81445 7.3887 4.8716 7.3887 7.40969C7.38013 9.93922 9.42394 11.9973 11.9525 12.0059H11.9849Z', stroke='currentColor', stroke-width='1.42857', stroke-linecap='round', stroke-linejoin='round')
+            span.item-name Transactions
+            i.right-icon
+              svg(xmlns='http://www.w3.org/2000/svg', width='18', fill='none', viewBox='0 0 24 24', stroke='currentColor')
+                path(stroke-linecap='round', stroke-linejoin='round', stroke-width='2', d='M9 5l7 7-7 7')
+          ul.sub-nav.collapse#transactions(data-bs-parent='#sidebar')
+            li.nav-item
+              a.nav-link(href='/transactions/pending')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name Pending
+            li.nav-item
+              a.nav-link(href='/transactions/canceled')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name Canceled
+            li.nav-item
+              a.nav-link.active(href='/transactions/approved')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name Approved       
+          a.nav-link(data-bs-toggle='collapse', href='#sidebar-user', role='button', aria-expanded='false', aria-controls='sidebar-user')
+            i.icon
+              svg(width='22', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9849 15.3462C8.11731 15.3462 4.81445 15.931 4.81445 18.2729C4.81445 20.6148 8.09636 21.2205 11.9849 21.2205C15.8525 21.2205 19.1545 20.6348 19.1545 18.2938C19.1545 15.9529 15.8735 15.3462 11.9849 15.3462Z', stroke='currentColor', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9849 12.0059C14.523 12.0059 16.5801 9.94779 16.5801 7.40969C16.5801 4.8716 14.523 2.81445 11.9849 2.81445C9.44679 2.81445 7.3887 4.8716 7.3887 7.40969C7.38013 9.93922 9.42394 11.9973 11.9525 12.0059H11.9849Z', stroke='currentColor', stroke-width='1.42857', stroke-linecap='round', stroke-linejoin='round')
+            span.item-name Users
+            i.right-icon
+              svg(xmlns='http://www.w3.org/2000/svg', width='18', fill='none', viewBox='0 0 24 24', stroke='currentColor')
+                path(stroke-linecap='round', stroke-linejoin='round', stroke-width='2', d='M9 5l7 7-7 7')
+          ul.sub-nav.collapse#sidebar-user(data-bs-parent='#sidebar')
+            li.nav-item
+              a.nav-link(href='/admin')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name User Profile
+            li.nav-item
+              a.nav-link(href='/admin-traders')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name Traders Profile
+main.main-content
+  .position-relative
+    // Nav Start
+    nav.nav.navbar.navbar-expand-lg.navbar-light.iq-navbar.border-bottom
+      .container-fluid.navbar-inner
+        a.navbar-brand(href='index.html').
+          
+          
+        .sidebar-toggle(data-toggle='sidebar', data-active='true')
+          i.icon
+            svg(width='20px', height='20px', viewBox='0 0 24 24')
+              path(fill='currentColor', d='M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z')
+        h4.title.
+          
+          Admin
+          
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+            span.navbar-toggler-bar.bar1.mt-2
+            span.navbar-toggler-bar.bar2
+            span.navbar-toggler-bar.bar3
+        .collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav.ms-auto.navbar-list.mb-2.mb-lg-0.align-items-center
+            li.nav-item.dropdown
+              a.nav-link.py-0.d-flex.align-items-center#navbarDropdown(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                img.img-fluid.avatar.avatar-50.avatar-rounded(src='/assets/images/avatars/01.png', alt='User-Profile')
+                .caption.ms-3
+                  h6.mb-0.caption-title= `${user.firstName} ${user.lastName}`
+                  p.mb-0.caption-sub-title= `${user.role}`
+              ul.dropdown-menu.dropdown-menu-end(aria-labelledby='navbarDropdown')
+                li.border-0
+                  a#logoutLink.dropdown-item(href='') Logout
+                  
+    // Nav End
+  .container-fluid.content-inner.pb-0
+    div
+      .row
+        .col-sm-12
+          .card
+            .card-header
+              h4.card-title.text-white Approved Transactions
+            .d-flex.mt-3.ms-4.me-4.justify-content-between
+            .card-body
+              .table-responsive
+                table.table
+                  if transactions.length > 0
+                    thead
+                      tr
+                        th First Name
+                        th Last Name
+                        th Transaction Type
+                        th Amount
+                        th Date
+                        th Status
+                    tbody
+                      each transaction in transactions
+                          tr
+                          td= transaction.user.firstName
+                          td= transaction.user.lastName
+                          td= transaction.type
+                          td= `$${transaction.amount}`
+                          td= transaction.date
+                          td Approved
+                  else 
+                    p No approved transactions found
+
+
+//  Wrapper End
+//  offcanvas start 
+//  Custom JavaScript 
+script(src='/js/bundle.js')
+//  Backend Bundle JavaScript 
+script(src='../../assets/js/libs.min.js')
+//  widgetchart JavaScript 
+script(src='../../assets/js/charts/widgetcharts.js')
+//  fslightbox JavaScript 
+script(src='../../assets/js/fslightbox.js')
+//  app JavaScript 
+script(src='../../assets/js/app.js')
+//  apexchart JavaScript 
+script(src='../../assets/js/charts/apexcharts.js')

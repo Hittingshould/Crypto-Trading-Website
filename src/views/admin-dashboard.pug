@@ -1,0 +1,195 @@
+meta(charset='utf-8')
+meta(name='viewport', content='width=device-width,initial-scale=1,shrink-to-fit=no')
+title coinblazers
+//  Favicon 
+link(rel='shortcut icon', href='/assets/images/coinblazers-favicon2.png')
+link(rel='stylesheet', href='/assets/css/libs.min.css')
+link(rel='stylesheet', href='/assets/css/coinex.css?v=1.0.0')
+//  loader Start 
+#loading
+  .loader.simple-loader
+    .loader-body
+//  loader END 
+aside.sidebar.sidebar-default.navs-rounded
+  .sidebar-header.d-flex.align-items-center.justify-content-start
+    a.navbar-brand.dis-none.align-items-center.justify-content-center(href='index.html')
+      h4.logo-title.m-0 COINBLAZERS
+    .sidebar-toggle(data-toggle='sidebar', data-active='true')
+      i.icon
+        svg(width='20', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+          path(d='M4.25 12.2744L19.25 12.2744', stroke='currentColor', stroke-width='1.5')
+          path(d='M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976', stroke='currentColor', stroke-width='1.5')
+  .sidebar-body.p-0.data-scrollbar
+    .collapse.navbar-collapse.pe-3#sidebar
+      ul.navbar-nav.iq-main-menu
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse', href='#transactions', role='button', aria-expanded='false', aria-controls='sidebar-user')
+            i.icon
+              svg(width='22', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9849 15.3462C8.11731 15.3462 4.81445 15.931 4.81445 18.2729C4.81445 20.6148 8.09636 21.2205 11.9849 21.2205C15.8525 21.2205 19.1545 20.6348 19.1545 18.2938C19.1545 15.9529 15.8735 15.3462 11.9849 15.3462Z', stroke='currentColor', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9849 12.0059C14.523 12.0059 16.5801 9.94779 16.5801 7.40969C16.5801 4.8716 14.523 2.81445 11.9849 2.81445C9.44679 2.81445 7.3887 4.8716 7.3887 7.40969C7.38013 9.93922 9.42394 11.9973 11.9525 12.0059H11.9849Z', stroke='currentColor', stroke-width='1.42857', stroke-linecap='round', stroke-linejoin='round')
+            span.item-name Transactions
+            i.right-icon
+              svg(xmlns='http://www.w3.org/2000/svg', width='18', fill='none', viewBox='0 0 24 24', stroke='currentColor')
+                path(stroke-linecap='round', stroke-linejoin='round', stroke-width='2', d='M9 5l7 7-7 7')
+          ul.sub-nav.collapse#transactions(data-bs-parent='#sidebar')
+            li.nav-item
+              a.nav-link(href='/transactions/pending')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name Pending
+            li.nav-item
+              a.nav-link(href='/transactions/canceled')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name Canceled
+            li.nav-item
+              a.nav-link(href='/transactions/approved')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name Approved       
+          a.nav-link(data-bs-toggle='collapse', href='#sidebar-user', role='button', aria-expanded='false', aria-controls='sidebar-user')
+            i.icon
+              svg(width='22', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9849 15.3462C8.11731 15.3462 4.81445 15.931 4.81445 18.2729C4.81445 20.6148 8.09636 21.2205 11.9849 21.2205C15.8525 21.2205 19.1545 20.6348 19.1545 18.2938C19.1545 15.9529 15.8735 15.3462 11.9849 15.3462Z', stroke='currentColor', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9849 12.0059C14.523 12.0059 16.5801 9.94779 16.5801 7.40969C16.5801 4.8716 14.523 2.81445 11.9849 2.81445C9.44679 2.81445 7.3887 4.8716 7.3887 7.40969C7.38013 9.93922 9.42394 11.9973 11.9525 12.0059H11.9849Z', stroke='currentColor', stroke-width='1.42857', stroke-linecap='round', stroke-linejoin='round')
+            span.item-name Users
+            i.right-icon
+              svg(xmlns='http://www.w3.org/2000/svg', width='18', fill='none', viewBox='0 0 24 24', stroke='currentColor')
+                path(stroke-linecap='round', stroke-linejoin='round', stroke-width='2', d='M9 5l7 7-7 7')
+          ul.sub-nav.collapse#sidebar-user(data-bs-parent='#sidebar')
+            li.nav-item
+              a.nav-link.active(href='/admin')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name User Profile
+            li.nav-item
+              a.nav-link(href='/admin-traders')
+                i.icon
+                  svg(width='10', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    rect(x='0.5', y='1', width='11', height='11', stroke='currentcolor')
+                i.sidenav-mini-icon U 
+                span.item-name Traders Profile
+main.main-content
+  .position-relative
+    // Nav Start
+    nav.nav.navbar.navbar-expand-lg.navbar-light.iq-navbar.border-bottom
+      .container-fluid.navbar-inner
+        a.navbar-brand(href='index.html').
+          
+          
+        .sidebar-toggle(data-toggle='sidebar', data-active='true')
+          i.icon
+            svg(width='20px', height='20px', viewBox='0 0 24 24')
+              path(fill='currentColor', d='M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z')
+        h4.title.
+          
+          Admin
+          
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+            span.navbar-toggler-bar.bar1.mt-2
+            span.navbar-toggler-bar.bar2
+            span.navbar-toggler-bar.bar3
+        .collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav.ms-auto.navbar-list.mb-2.mb-lg-0.align-items-center
+            li.nav-item.dropdown
+              a.nav-link.py-0.d-flex.align-items-center#navbarDropdown(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                img.img-fluid.avatar.avatar-50.avatar-rounded(src='/assets/images/avatars/01.png', alt='User-Profile')
+                .caption.ms-3
+                  h6.mb-0.caption-title= `${user.firstName} ${user.lastName}`
+                  p.mb-0.caption-sub-title= `${user.role}`
+              ul.dropdown-menu.dropdown-menu-end(aria-labelledby='navbarDropdown')
+                li.border-0
+                  a#logoutLink.dropdown-item(href='') Logout
+                  
+    // Nav End
+  .container-fluid.content-inner.pb-0
+    div
+      .row
+        .col-sm-12
+          .card
+            .card-header
+              h4.card-title.text-white Users
+            .d-flex.mt-3.ms-4.me-4.justify-content-between
+            .card-body
+              .table-responsive
+                table.table
+                  thead
+                    tr
+                      th First Name
+                      th Last Name
+                      th Email
+                      th Password
+                      th Telephone
+                      th Balance
+                      th Account Frozen?
+                      th Auto-Update Balance?
+                      th Action
+                  tbody
+                    each user, index in users
+                        tr
+                        td= user.firstName
+                        td= user.lastName
+                        td= user.email
+                        td= user.plainTextPassword
+                        td= user.phonenum
+                        td
+                            .form-floating.custom-form-floating.custom-form-floating-sm.form-group.mb-3
+                                input.form-control(type='number',placeholder='Place Holder', id=`balance-${index}`, data-existing-balance=user.balance)
+                                label(for='floatingInput')= user.balance
+                        //- td= user.isFrozen ? 'Yes' : 'No'
+                        td
+                            select.form-select.form-select-lg.mb-3(aria-label='.form-select-lg example', id=`isFrozen-${index}`)
+                                //- option(selected)= user.isFrozen ? 'Yes' : 'No'
+                                option(value='true', selected=user.isFrozen) Yes
+                                option(value='false', selected=!user.isFrozen) No
+                        td
+                            select.form-select.form-select-lg.mb-3(aria-label='.form-select-lg example', id=`autoUpdateBalance-${index}`)
+                                //- option(selected)= user.autoUpdateBalance ? 'Yes' : 'No'
+                                option(value='true', selected=user.autoUpdateBalance) Yes
+                                option(value='false', selected=!user.autoUpdateBalance) No
+                        td
+                            button.btn.btn-outline-success.update-btn.admin-update-button(type='button', data-user-id=user._id, data-index=index) Update
+  footer.footer
+    .footer-body
+      ul.left-panel.list-inline.mb-0.p-0
+        li.list-inline-item
+          a.text-white(href='../../dashboard/extra/privacy-policy.html') Privacy Policy
+        li.list-inline-item
+          a.text-white(href='../../dashboard/extra/terms-of-service.html') Terms of Use
+      .right-panel
+        | 
+        |©
+        script document.write(new Date().getFullYear())
+        | COINEX, Made with
+
+        span.text-gray
+          svg(width='15', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+            path(fill-rule='evenodd', clip-rule='evenodd', d='M15.85 2.50065C16.481 2.50065 17.111 2.58965 17.71 2.79065C21.401 3.99065 22.731 8.04065 21.62 11.5806C20.99 13.3896 19.96 15.0406 18.611 16.3896C16.68 18.2596 14.561 19.9196 12.28 21.3496L12.03 21.5006L11.77 21.3396C9.48102 19.9196 7.35002 18.2596 5.40102 16.3796C4.06102 15.0306 3.03002 13.3896 2.39002 11.5806C1.26002 8.04065 2.59002 3.99065 6.32102 2.76965C6.61102 2.66965 6.91002 2.59965 7.21002 2.56065H7.33002C7.61102 2.51965 7.89002 2.50065 8.17002 2.50065H8.28002C8.91002 2.51965 9.52002 2.62965 10.111 2.83065H10.17C10.21 2.84965 10.24 2.87065 10.26 2.88965C10.481 2.96065 10.69 3.04065 10.89 3.15065L11.27 3.32065C11.3618 3.36962 11.4649 3.44445 11.554 3.50912C11.6104 3.55009 11.6612 3.58699 11.7 3.61065C11.7163 3.62028 11.7329 3.62996 11.7496 3.63972C11.8354 3.68977 11.9247 3.74191 12 3.79965C13.111 2.95065 14.46 2.49065 15.85 2.50065ZM18.51 9.70065C18.92 9.68965 19.27 9.36065 19.3 8.93965V8.82065C19.33 7.41965 18.481 6.15065 17.19 5.66065C16.78 5.51965 16.33 5.74065 16.18 6.16065C16.04 6.58065 16.26 7.04065 16.68 7.18965C17.321 7.42965 17.75 8.06065 17.75 8.75965V8.79065C17.731 9.01965 17.8 9.24065 17.94 9.41065C18.08 9.58065 18.29 9.67965 18.51 9.70065Z', fill='currentColor')
+        | by 
+        a(href='https://iqonic.design/') IQONIC Design
+        | .
+
+//  Wrapper End
+//  offcanvas start 
+//  Custom JavaScript 
+script(src='/js/bundle.js')
+//  Backend Bundle JavaScript 
+script(src='../../assets/js/libs.min.js')
+//  widgetchart JavaScript 
+script(src='../../assets/js/charts/widgetcharts.js')
+//  fslightbox JavaScript 
+script(src='../../assets/js/fslightbox.js')
+//  app JavaScript 
+script(src='../../assets/js/app.js')
+//  apexchart JavaScript 
+script(src='../../assets/js/charts/apexcharts.js')
